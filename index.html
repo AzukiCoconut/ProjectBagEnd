@@ -12,6 +12,9 @@
     <header>
         <div class="header" id="header">
             <h1>Weather comparison Mars-Earth</h1>
+
+            <h2 class="lead">Date:<br />
+            <span id="time-display" class="lead"></span></h2>
         </div>
     </header>
     <main>
@@ -21,7 +24,16 @@
                     <figure>
                         <div class="MarsContainer" id="MarsContainer">
                             <h2>Mars Weather</h2>
-                            <p>Date</p>
+
+                            <p>When...</p>
+                            <label for="SelectDate">Choose a date:</label> 
+                                <select name="SelectDate" id="SelectDate"> 
+                                    <option value="01/01/2020">01/01/2020</option> 
+                                    <option value="02/02/2020">02/02/2020</option> 
+                                    <option value="03/03/2020">03/03/2020</option> 
+                                    <option value="04/04/2020">04/04/2020</option> 
+                                </select>
+
                             <p>Elysium Planitia</p>
                             <div class="MarsCard" id="MarsCard">
                                 <p>Weather Info</p>
@@ -33,8 +45,24 @@
                     <figure>
                         <div class="EarthContainer" id="EarthContainer">
                             <h2>Earth</h2>
-                            <p>City</p>
-                            <p>Date</p>
+
+                            <p>Where...</p>
+                            <label for="CityName">Choose a City:</label> 
+                                <select name="CityName" id="CityName"> 
+                                    <option value="Ottawa">Ottawa</option> 
+                                    <option value="London">London</option> 
+                                    <option value="New York">New York</option> 
+                                    <option value="Tokio">Tokio</option> 
+                                </select>
+                            <p>When...</p>
+                            <label for="SelectDate">Choose a date:</label> 
+                                <select name="SelectDate" id="SelectDate"> 
+                                    <option value="01/01/2020">01/01/2020</option> 
+                                    <option value="02/02/2020">02/02/2020</option> 
+                                    <option value="03/03/2020">03/03/2020</option> 
+                                    <option value="04/04/2020">04/04/2020</option> 
+                                </select>
+
                             <div class="EarthCard" id="EarthCard">
                                 <p>Weather Info</p>
                             </div>
@@ -50,6 +78,15 @@
             <h3>Thank you!</h3>
         </div>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+    integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+    crossorigin="anonymous"></script>
+
+    <script src="./script.js"></script>
+
 </body>
 
 </html>
