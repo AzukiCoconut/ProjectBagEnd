@@ -11,8 +11,7 @@
 <body>
     <header>
         <div class="header" id="header">
-            <h1>Weather comparison Mars-Earth</h1>
-
+            <h1>Weather comparison North-South</h1>
             <h2 class="lead">Date:<br />
             <span id="time-display" class="lead"></span></h2>
         </div>
@@ -22,30 +21,8 @@
             <div class="container" id="container">
                 <article>
                     <figure>
-                        <div class="MarsContainer" id="MarsContainer">
-                            <h2>Mars Weather</h2>
-
-                            <p>When...</p>
-                            <label for="SelectDate">Choose a date:</label> 
-                                <select name="SelectDate" id="SelectDate"> 
-                                    <option value="01/01/2020">01/01/2020</option> 
-                                    <option value="02/02/2020">02/02/2020</option> 
-                                    <option value="03/03/2020">03/03/2020</option> 
-                                    <option value="04/04/2020">04/04/2020</option> 
-                                </select>
-
-                            <p>Elysium Planitia</p>
-                            <div class="MarsCard" id="MarsCard">
-                                <p>Weather Info</p>
-                            </div>
-                        </div>
-                    </figure>
-                </article>
-                <article>
-                    <figure>
-                        <div class="EarthContainer" id="EarthContainer">
-                            <h2>Earth</h2>
-
+                        <div class="NorthContainer" id="NorthContainer">
+                            <h2>North Weather</h2>
                             <p>Where...</p>
                             <label for="CityName">Choose a City:</label> 
                                 <select name="CityName" id="CityName"> 
@@ -54,19 +31,34 @@
                                     <option value="New York">New York</option> 
                                     <option value="Tokio">Tokio</option> 
                                 </select>
-                            <p>When...</p>
-                            <label for="SelectDate">Choose a date:</label> 
-                                <select name="SelectDate" id="SelectDate"> 
-                                    <option value="01/01/2020">01/01/2020</option> 
-                                    <option value="02/02/2020">02/02/2020</option> 
-                                    <option value="03/03/2020">03/03/2020</option> 
-                                    <option value="04/04/2020">04/04/2020</option> 
-                                </select>
-
-                            <div class="EarthCard" id="EarthCard">
+                            <div class="NorthCard" id="NorthCard">
                                 <p>Weather Info</p>
                             </div>
+                            <div class="NorthCard" id="NorthCard">
+                                <p>Photo</p>
+                            </div>
 
+                        </div>
+                    </figure>
+                </article>
+                <article>
+                    <figure>
+                        <div class="SouthContainer" id="SouthContainer">
+                            <h2>South Weather</h2>
+                            <p>Where...</p>
+                            <label for="CityName">Choose a City:</label> 
+                                <select name="CityName" id="CityName"> 
+                                    <option value="Buenos Aires">Buenos Aires</option> 
+                                    <option value="Lima">Lima</option> 
+                                    <option value="Santiago">Santiago</option> 
+                                    <option value="Brasilia">Brasilia</option> 
+                                </select>
+                            <div class="SouthCard" id="SouthCard">
+                                <p>Weather Info</p>
+                            </div>
+                            <div class="SouthCard" id="SouthCard">
+                                <p>Photo</p>
+                            </div>
                         </div>
                     </figure>
                 </article>

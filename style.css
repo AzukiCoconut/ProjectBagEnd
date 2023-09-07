@@ -1,13 +1,19 @@
 * {
-    background-color: #ffa07a;
+    color: black;
+}
+
+body {
+    background-image: url('./Images/Earth/Earth1.jpeg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 .header {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: larger;
     text-align: center;
-    border: solid black 5px;
-    border-radius: 10px;
+    text-decoration: double;
     margin-bottom: 10px;
 }
 
@@ -15,51 +21,59 @@
     display: grid; 
     grid-template-columns: 1fr 1fr; 
     grid-gap: 20px; 
-    border: solid black 5px;
-    border-radius: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-.MarsContainer {
+.NorthContainer {
     width: 100%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: medium;
     text-align: center;
-    border: solid black 5px;
+    background: rgba(254, 254, 254, 0.676);
     border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.988); 
+    margin: 10px;
+    padding: 10px;
 }
 
-.MarsCard {
+.NorthCard {
     border: solid black 5px;
     border-radius: 10px;
     width: 85%;
+    margin-top: 25px;
     margin-left: 50px;
     margin-bottom: 25px;
 }
 
-.EarthContainer {
+.SouthContainer {
     width: 100%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: medium;
     text-align: center;
-    border: solid black 5px;
+    background: rgba(254, 254, 254, 0.676);
     border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.988); 
+    margin: 10px;
+    padding: 10px;
 }
 
-.EarthCard {
+.SouthCard {
     border: solid black 5px;
     border-radius: 10px;
     width: 85%;
+    margin-top: 25px;
     margin-left: 50px;
     margin-bottom: 25px;
 }
 
 .footer {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: small;
+    font-size: large;
     text-align: center;
-    border: solid black 5px;
+    background: rgba(254, 254, 254, 0.676);
     border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.988); 
     margin-top: 10px;
+    padding: 15px;
 }
