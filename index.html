@@ -11,8 +11,8 @@
 <body>
     <header>
         <div class="header" id="header">
-            <h1>Weather comparison North-South</h1>
-            <h2 class="lead">Date:<br />
+            <h1>Weather Comparison</h1>
+            <h2 class="lead">Today:<br />
             <span id="time-display" class="lead"></span></h2>
         </div>
     </header>
@@ -22,15 +22,11 @@
                 <article>
                     <figure>
                         <div class="NorthContainer" id="NorthContainer">
-                            <h2>North Weather</h2>
+                            <h2>City No. 1</h2>
                             <p>Where...</p>
-                            <label for="CityName">Choose a City:</label> 
-                                <select name="CityName" id="CityName"> 
-                                    <option value="Ottawa">Ottawa</option> 
-                                    <option value="London">London</option> 
-                                    <option value="New York">New York</option> 
-                                    <option value="Tokio">Tokio</option> 
-                                </select>
+                            <label for="city-search">City:</label>
+                            <input type="search" id="city-search" name="q" />
+                            <button>Search</button>
                             <div class="NorthCard" id="NorthCard">
                                 <p>Weather Info</p>
                             </div>
@@ -44,15 +40,11 @@
                 <article>
                     <figure>
                         <div class="SouthContainer" id="SouthContainer">
-                            <h2>South Weather</h2>
+                            <h2>City No. 2</h2>
                             <p>Where...</p>
-                            <label for="CityName">Choose a City:</label> 
-                                <select name="CityName" id="CityName"> 
-                                    <option value="Buenos Aires">Buenos Aires</option> 
-                                    <option value="Lima">Lima</option> 
-                                    <option value="Santiago">Santiago</option> 
-                                    <option value="Brasilia">Brasilia</option> 
-                                </select>
+                            <label for="city-search">City:</label>
+                            <input type="search" id="city-search" name="q" />
+                            <button>Search</button>
                             <div class="SouthCard" id="SouthCard">
                                 <p>Weather Info</p>
                             </div>

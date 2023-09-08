@@ -1,3 +1,7 @@
+/* Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 * {
     color: black;
 }
@@ -68,6 +72,10 @@ body {
 }
 
 .footer {
+    position: fixed;
+    left: 25px;
+    bottom: 25px;
+    width: 95%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: large;
     text-align: center;
