@@ -26,7 +26,7 @@
           }
         }
       </script>
-    <title></title>
+    <title>Weather Comparison</title>
 </head>
 
 <body>
@@ -44,6 +44,7 @@
                     <figure>
                         <div class="NorthContainer" id="NorthContainer">
                             <h2>Location 1</h2>
+                            <label class="sr-only" for="cityInput">City:</label>
                             <input class="italic justify-self-center px-8 rounded-md border-solid border-slate-500 border-2 font-mono" type="text" id="cityInput" placeholder="Type your City here!" name="q" value="Fredericton"/>
                             <button class="px-4 rounded-md border-solid border-slate-500 border-2 transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300" id="searchBtn">Search</button>
 
@@ -60,11 +61,10 @@
                 <article>
                     <figure>
                         <div class="SouthContainer" id="SouthContainer">
-                            <h2>City No. 2</h2>
-                            <p>Where...</p>
-                            <label for="city-search-south">City:</label>
-                            <input type="search" id="city-search-south" name="sourth" />
-                            <button id="southBtn" type="submit">Search</button>
+                            <h2>Location 2</h2>
+                            <label class="sr-only" for="city-search-south">City:</label>
+                            <input class="italic justify-self-center px-8 rounded-md border-solid border-slate-500 border-2 font-mono" type="search" id="city-search-south" name="sourth" />
+                            <button class="px-4 rounded-md border-solid border-slate-500 border-2 transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300" id="southBtn" type="submit">Search</button>
                             <div class="SouthCard" id="SouthCard">
                                 <p>Weather Info</p>
                             </div>
