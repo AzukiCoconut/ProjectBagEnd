@@ -7,6 +7,7 @@ $(document).ready(function () {
     //Listen search button, trim user input and store the value in city.
     $("#searchBtn").on("click", function (event) {
       event.preventDefault();
+      var city = $("#cityInput").val().toLowerCase().trim();
       weatherGet(city);
     });
       //Fetch openweather API by user input argument: city.
@@ -26,7 +27,7 @@ $(document).ready(function () {
         console.log(dayjs.unix(currentDay).format('MMM D, YYYY, hh:mm:ss a'));
         console.log(response)
         $("#NorthCard").empty()
-        //dynamically add HTML element and CSS class to the CurrentWeather
+        //dynamically add HTML element and CSS class to the Page
         var card = $("<div>").addClass("card text-black bg-light");
         var cardBody = $("<div>").addClass("card-body currentWeather");
         var cardTitle = $("<div>")
