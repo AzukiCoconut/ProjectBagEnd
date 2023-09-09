@@ -7,7 +7,7 @@
 }
 
 body {
-    background-image: url('./Images/Earth/Earth1.jpeg');
+    background-image: url("./Images/pexels-pixabay-209831.jpg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -87,7 +87,6 @@ body {
 }
 .card {
     border: 1px solid #1a1a1a;
-    margin-bottom: 1rem;
 }
 
 .card .card-header {
