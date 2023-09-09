@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300&family=Space+Grotesk:wght@300&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
     <style type="text/tailwindcss">
@@ -29,9 +32,9 @@
     <title>Weather Comparison</title>
 </head>
 
-<body>
+<body class="min-h-screen font-['Space_Grotesk']">
     <header>
-        <div class="text-4xl text-center font-mono bg-slate-500 shadow-inner" id="header">
+        <div class="font-['MuseoModerno'] text-4xl text-center bg-slate-500/50 shadow-md" id="header">
             <h1>Weather Comparison</h1>
             <h2 class="lead">Today:<br />
             <span id="time-display" class="lead"></span></h2>
@@ -40,7 +43,7 @@
     <main>
         <section>
             <div class="main-container" id="container">
-                        <div class="p-4 bg-slate-500/75 rounded-md text-center" id="NorthContainer">
+                        <div class="p-4 bg-slate-500/50 rounded-md text-center shadow-md" id="NorthContainer">
                             <h2 class="mb-4 text-2xl font-bold">Location 1</h2>
                             <label class="sr-only" for="cityInput">City:</label>
                             <input class="italic justify-self-center px-8 rounded-md border-solid border-slate-500 border-2 font-mono" type="text" id="cityInput" placeholder="Type your City here!" name="q" value="Fredericton"/>
