@@ -6,12 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./style.css">
-    <title></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300&family=Space+Grotesk:wght@300&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+      </style>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+    <title>Weather Comparison</title>
 </head>
 
-<body>
+<body class="min-h-screen font-['Space_Grotesk']">
     <header>
-        <div class="header" id="header">
+        <div class="font-['MuseoModerno'] my-4 p-4 text-4xl text-center bg-slate-500/50 shadow-md" id="header">
             <h1>Weather Comparison</h1>
             <h2 class="lead">Today:<br />
             <span id="time-display" class="lead"></span></h2>
@@ -20,15 +43,11 @@
     <main>
         <section>
             <div class="main-container" id="container">
-                <article>
-                    <figure>
-                        <div class="NorthContainer" id="NorthContainer">
-                            <h2>City No. 1</h2>
-                            <p>Where...</p>
-
-                            <label for="cityInput">City:</label>
-                            <input type="text" id="cityInput" placeholder="Fredericton" name="q" />
-                            <button id="searchBtn">Search</button>
+                        <div class="p-4 bg-slate-500/50 rounded-md text-center shadow-md" id="NorthContainer">
+                            <h2 class="mb-4 text-2xl font-bold">Location 1</h2>
+                            <label class="sr-only" for="cityInput">City:</label>
+                            <input class="italic justify-self-center px-8 rounded-md border-solid border-slate-500 border-2 font-mono" type="text" id="cityInput" placeholder="Type your City here!" name="q" value="Fredericton"/>
+                            <button class="text-white font-bold px-4 rounded-md border-solid border-slate-500 border-2 transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300" id="searchBtn">Search</button>
 
                             <div class="NorthCard" id="NorthCard">
                                 <p>Weather Info</p>
@@ -38,16 +57,12 @@
                             </div>
 
                         </div>
-                    </figure>
-                </article>
-                <article>
-                    <figure>
-                        <div class="SouthContainer" id="SouthContainer">
-                            <h2>City No. 2</h2>
-                            <p>Where...</p>
-                            <label for="city-search-south">City:</label>
-                            <input type="search" id="city-search-south" name="sourth" />
-                            <button id="southBtn" type="submit">Search</button>
+                    
+                        <div class="p-4 bg-slate-500/50 rounded-md text-center shadow-md" id="SouthContainer">
+                            <h2 class="mb-4 text-2xl font-bold">Location 2</h2>
+                            <label class="sr-only" for="city-search-south">City:</label>
+                            <input class="italic justify-self-center px-8 rounded-md border-solid border-slate-500 border-2 font-mono" type="search" id="city-search-south" placeholder="Type your City here!" name="sourth" />
+                            <button class="text-white font-bold px-4 rounded-md border-solid border-slate-500 border-2 transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300" id="southBtn" type="submit">Search</button>
                             <div class="SouthCard" id="SouthCard">
                                 <p>Weather Info</p>
                             </div>
@@ -55,14 +70,12 @@
                                 
                             </div>
                         </div>
-                    </figure>
-                </article>
             </div>
         </section>
     </main>
     <footer>
-        <div class="footer" id="footer">
-            <h3>Thank you!</h3>
+        <div class="font-bold my-4 p-4 bg-slate-500/50 rounded-md text-center shadow-md" id="footer">
+            <h3>Copyright 2023 Group 1</h3>
         </div>
     </footer>
 
