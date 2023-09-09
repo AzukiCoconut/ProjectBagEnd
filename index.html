@@ -6,12 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+      </style>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
     <title></title>
 </head>
 
 <body>
     <header>
-        <div class="header" id="header">
+        <div class="text-4xl text-center font-mono bg-slate-500 shadow-inner" id="header">
             <h1>Weather Comparison</h1>
             <h2 class="lead">Today:<br />
             <span id="time-display" class="lead"></span></h2>
@@ -23,12 +43,9 @@
                 <article>
                     <figure>
                         <div class="NorthContainer" id="NorthContainer">
-                            <h2>City No. 1</h2>
-                            <p>Where...</p>
-
-                            <label for="cityInput">City:</label>
-                            <input type="text" id="cityInput" placeholder="Fredericton" name="q" />
-                            <button id="searchBtn">Search</button>
+                            <h2>Location 1</h2>
+                            <input class="italic justify-self-center px-8 rounded-md border-solid border-slate-500 border-2 font-mono" type="text" id="cityInput" placeholder="Type your City here!" name="q" value="Fredericton"/>
+                            <button class="px-4 rounded-md border-solid border-slate-500 border-2 transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300" id="searchBtn">Search</button>
 
                             <div class="NorthCard" id="NorthCard">
                                 <p>Weather Info</p>
