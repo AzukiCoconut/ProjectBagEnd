@@ -13,7 +13,10 @@ function getPlaceID (city, location) {
     var googleSearch = 'https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=' + city + '&inputtype=textquery&key=' + GOOGLE_API_KEY;
     console.log(googleSearch);
     fetch(googleSearch, {
-        credentials: "same-origin",
+        method: 'GET',
+       origin: 'https://azukicoconut.github.io/ProjectBagEnd/',
+       header: 
+        {'Content-Type' : 'application/json',},
     })
     .then(function(response){
         if (response.ok) {
@@ -30,7 +33,10 @@ function getPhotoReference(placeID, location) {
     var referenceSearch = 'https://maps.googleapis.com/maps/api/place/details/json?place_id=' + placeID + '&key=' + GOOGLE_API_KEY;
     console.log(referenceSearch);
     fetch(referenceSearch, {
-        credentials: "same-origin",
+        method: 'GET',
+       origin: 'https://azukicoconut.github.io/ProjectBagEnd/',
+       header: 
+        {'Content-Type' : 'application/json',},
     })
     .then(function(response){
         if (response.ok) {
@@ -140,7 +146,7 @@ function weatherGet(city, location) {
 }
  
 function uvGet(lat, lon, location) {
-    var queryURLU = `http://api.openweathermap.org/data/2.5/uvi?lat=${lat}&lon=${lon}&appid=${APIKey}`;
+    var queryURLU = `https://api.openweathermap.org/data/2.5/uvi?lat=${lat}&lon=${lon}&appid=${APIKey}`;
     
     $.ajax({
         url: queryURLU,
