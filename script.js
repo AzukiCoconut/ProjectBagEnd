@@ -10,33 +10,31 @@ const APIKey = "8b9c973be8ff8777178ef11119ab4c94";
 const GOOGLE_API_KEY = 'AIzaSyDPIrf1wp-rgDqR4oUstiS_JzehChWazsA';
 
 function getPlaceID (city, location) {
+    var herokuURL = 'https://api.allorigins.win/raw?url='
     var googleSearch = 'https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=' + city + '&inputtype=textquery&key=' + GOOGLE_API_KEY;
-    console.log(googleSearch);
-    fetch(googleSearch, {
+    console.log(herokuURL + encodeURIComponent(googleSearch));
+    fetch(herokuURL + encodeURIComponent(googleSearch), {
         method: 'GET',
-       origin: 'https://azukicoconut.github.io/ProjectBagEnd/',
-       header: 
-        {'Content-Type' : 'application/json',},
+        header: 
+            {'Content-Type' : 'application/json',},
     })
     .then(function(response){
-        if (response.ok) {
             response.json().then(function(data){
                 var placeID = data.candidates[0].place_id;
                 getPhotoReference(placeID, location);
             })
-        } 
     })
 }
 
 
 function getPhotoReference(placeID, location) {
+    var herokuURL = 'https://api.allorigins.win/raw?url='
     var referenceSearch = 'https://maps.googleapis.com/maps/api/place/details/json?place_id=' + placeID + '&key=' + GOOGLE_API_KEY;
     console.log(referenceSearch);
-    fetch(referenceSearch, {
+    fetch(herokuURL + encodeURIComponent(referenceSearch), {
         method: 'GET',
-       origin: 'https://azukicoconut.github.io/ProjectBagEnd/',
-       header: 
-        {'Content-Type' : 'application/json',},
+        header: 
+            {'Content-Type' : 'application/json',},
     })
     .then(function(response){
         if (response.ok) {
