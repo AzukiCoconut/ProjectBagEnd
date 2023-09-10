@@ -36,8 +36,6 @@
     <header>
         <div class="font-['MuseoModerno'] my-4 p-4 text-4xl text-center bg-slate-500/50 shadow-md" id="header">
             <h1>Weather Comparison</h1>
-            <h2 class="lead">Today:<br />
-            <span id="time-display" class="lead"></span></h2>
         </div>
     </header>
     <main>
@@ -46,8 +44,8 @@
                         <div class="p-4 bg-slate-500/50 rounded-md text-center shadow-md" id="NorthContainer">
                             <h2 class="mb-4 text-2xl font-bold">Location 1</h2>
                             <label class="sr-only" for="cityInput">City:</label>
-                            <input class="italic justify-self-center px-8 rounded-md border-solid border-slate-500 border-2 font-mono" type="text" id="cityInput" placeholder="Type your City here!" name="q" value="Fredericton"/>
-                            <button class="text-white font-bold px-4 rounded-md border-solid border-slate-500 border-2 transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300" id="searchBtn">Search</button>
+                            <input class="italic justify-self-center px-8 rounded-md border-solid border-slate-500 border-2 font-mono" type="text" id="city-search-north" placeholder="Type your City here!" name="north" value="Fredericton"/>
+                            <button class="text-white font-bold px-4 rounded-md border-solid border-slate-500 border-2 transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300" id="northBtn">Search</button>
 
                             <div class="NorthCard" id="NorthCard">
                                 <p>Weather Info</p>
@@ -61,7 +59,7 @@
                         <div class="p-4 bg-slate-500/50 rounded-md text-center shadow-md" id="SouthContainer">
                             <h2 class="mb-4 text-2xl font-bold">Location 2</h2>
                             <label class="sr-only" for="city-search-south">City:</label>
-                            <input class="italic justify-self-center px-8 rounded-md border-solid border-slate-500 border-2 font-mono" type="search" id="city-search-south" placeholder="Type your City here!" name="sourth" />
+                            <input class="italic justify-self-center px-8 rounded-md border-solid border-slate-500 border-2 font-mono" type="search" id="city-search-south" placeholder="Type your City here!" name="south" value="Melbourne"/>
                             <button class="text-white font-bold px-4 rounded-md border-solid border-slate-500 border-2 transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300" id="southBtn" type="submit">Search</button>
                             <div class="SouthCard" id="SouthCard">
                                 <p>Weather Info</p>
