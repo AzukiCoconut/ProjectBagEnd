@@ -114,7 +114,7 @@ function weatherGet(city, location) {
     var iconDiv = $(`<img src=" https://openweathermap.org/img/wn/${response.weather[0].icon}.png"></img>`);
     var tempDiv = $("<div>")
         .addClass("card-text")
-        .text("Temperature: " + Math.floor(response.main.temp) + "°F");
+        .text("Temperature: " + Math.floor(response.main.temp) + "°C");
     var humDiv = $("<div>")
         .addClass("card-text")
         .text("Humidity: " + Math.floor(response.main.humidity) + "%");
@@ -151,14 +151,14 @@ function uvGet(lat, lon, location) {
         method: "GET",
     }).then(function (responseU) {
         var uviC = $("<div>").text("UVI ");
-        var newSpan = $("<span>").addClass("dangerr").text(responseU.value);
+        var newSpan = $("<span>").text(responseU.value);
     
         $(".currentWeather"+location).append(uviC.append(newSpan));
     
         if (parseInt(responseU.value) > 5) {
             newSpan.attr("style", "background-color : red");
         } else {
-            newSpan.attr("style", "background-color : green");
+            newSpan.attr("style", "background-color : lightgreen");
         }
     });
 }
