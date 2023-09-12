@@ -82,7 +82,7 @@ The following animation demonstrates the application functionality:
 
 
 ## Solution URL
-[Solution URL Link:](https://azukicoconut.github.io/ProjectBagEnd)
+[Weather Comparison link](https://azukicoconut.github.io/ProjectBagEnd)
 
 
 ## Screenshots
