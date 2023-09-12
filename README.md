@@ -62,7 +62,7 @@ THEN I am presented with the weather and a representative picture of that city.
 ### Figure .1 GIF
 
 The following animation demonstrates the application functionality:
-![A user select Toronto and Ottawa.](./assets/Images/WeatherApp.gif.gif)
+![A user select Toronto and Ottawa.](./assets/Images/WeatherApp.gif)
 
 
 ## Usage Instructions
@@ -82,7 +82,7 @@ The following animation demonstrates the application functionality:
 
 
 ## Solution URL
-[Solution URL Link:](https://azukicoconut.github.io/ProjectBagEnd)
+[Weather Comparison link](https://azukicoconut.github.io/ProjectBagEnd)
 
 
 ## Screenshots
