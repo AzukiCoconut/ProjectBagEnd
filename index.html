@@ -47,36 +47,38 @@
     <main>
         <section>
             <!-- container for weather and photo-->
-            <div class="main-container" id="container">
+            <div class="container lg:columns-2 mx-auto" id="container">
               <!-- container for weather and photo location 1 -->
-              <div class="p-4 bg-slate-500/50 rounded-md text-center shadow-md" id="NorthContainer">
+              <div class="md:p-4 bg-slate-500/50 rounded-md text-center shadow-md" id="NorthContainer">
                 <h2 class="mb-4 text-2xl font-bold">Location 1</h2>          
                 <label class="sr-only" for="cityInput">City:</label>
-                <input class="italic justify-self-center px-8 rounded-md border-solid border-slate-500 border-2 font-mono" type="text" id="city-search-north" placeholder="Type your City here!" name="north" value="Fredericton"/>
-                <button class="text-white font-bold px-4 rounded-md border-solid border-slate-500 border-2 transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300" id="northBtn">Search</button>
+               
+                <input class="italic object-center px-8 rounded-md border-solid border-slate-500 border-2 font-mono md:inline" type="text" id="city-search-north" placeholder="Type your City here!" name="north" value="Fredericton"/>
+                <button class="object-center text-white font-bold px-4 rounded-md border-solid border-slate-500 border-2 transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300" id="northBtn">Search</button>
+                
                 <!-- Weather info here -->
-                <div class="NorthCard" id="NorthCard">
+                <div class="md:mx-auto m-2" id="NorthCard">
                   <p>Weather Info</p>
                 </div>
                 <!-- Photo info here -->
-                <div class="NorthCard" id="NorthCardPhoto">
+                <div class="md:mx-auto m-2" id="NorthCardPhoto">
                                 
                 </div>
 
               </div>          
                         
               <!-- container for weather and photo location 2 -->
-              <div class="p-4 bg-slate-500/50 rounded-md text-center shadow-md" id="SouthContainer">
+              <div class="md:p-4 bg-slate-500/50 rounded-md text-center shadow-md" id="SouthContainer">
                 <h2 class="mb-4 text-2xl font-bold">Location 2</h2>
                 <label class="sr-only" for="city-search-south">City:</label>
-                <input class="italic justify-self-center px-8 rounded-md border-solid border-slate-500 border-2 font-mono" type="search" id="city-search-south" placeholder="Type your City here!" name="south" value="Melbourne"/>
-                <button class="text-white font-bold px-4 rounded-md border-solid border-slate-500 border-2 transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300" id="southBtn" type="submit">Search</button>
+                <input class="italic px-8 rounded-md border-solid border-slate-500 border-2 font-mono md:inline" type="search" id="city-search-south" placeholder="Type your City here!" name="south" value="Melbourne"/>
+                <button class="object-center text-white font-bold px-4 rounded-md border-solid border-slate-500 border-2 transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300" id="southBtn" type="submit">Search</button>
                 <!-- Weather info here -->
-                <div class="SouthCard" id="SouthCard">
+                <div class="md:mx-auto m-2" id="SouthCard">
                   <p>Weather Info</p>
                   </div>
                   <!--Photo Info here  -->
-                <div class="SouthCard" id="SouthCardPhoto">
+                <div class="md:mx-auto m-2" id="SouthCardPhoto">
                                 
                 </div>
               </div>
