@@ -6,7 +6,7 @@
 
 /* background image */
 body {
-    background-image: url("/assets/Images/pexels-pixabay-209831.jpg");
+    background-image: url("../Images/pexels-pixabay-209831.jpg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
