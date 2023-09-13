@@ -5,10 +5,51 @@ var northBtn = $('#northBtn');
 var southBtn = $('#southBtn');
 var photoLocationOne = $('#NorthCardPhoto');
 var photoLocationTwo = $('#SouthCardPhoto');
-
+var searchedCities = [];
+var searchList = [];
 // Constants declared....
 const APIKey = "8b9c973be8ff8777178ef11119ab4c94";
 const GOOGLE_API_KEY = 'AIzaSyDPIrf1wp-rgDqR4oUstiS_JzehChWazsA';
+
+// A function that loads the autocomplete from Local Storage.
+function loadAutoComplete() {
+    searchList = JSON.parse(localStorage.getItem("pastSearch"));
+    var autoCompleteList = [];
+    for (var i=0;i<searchList.length;i++){
+        autoCompleteList.push(searchList[i].City);
+    }
+    console.log(autoCompleteList);
+    $('#city-search-north').autocomplete({source: autoCompleteList,});
+    $('#city-search-south').autocomplete({source: autoCompleteList,});
+
+}
+// checks the local storage to ensure it is not a duplicate value
+function isAlreadySaved(array, city) {
+    for (var i =0; i<array.length; i++) {
+        if (array[i].City === city) {
+            return true;
+        }
+    }
+    return false;
+}
+
+// A function that adds the city searched into Local Storage
+function addCityToLocalStorage(city) {
+    searchedCities = JSON.parse(localStorage.getItem("pastSearch"));
+    var item = {'City' : city};
+
+    if (searchedCities === null) {
+        var pastSearch = [];
+        pastSearch.push(item);
+        localStorage.setItem('pastSearch', JSON.stringify(pastSearch));
+    } else {
+        if (!isAlreadySaved(searchedCities, city)) {
+            searchedCities.push(item);
+            localStorage.setItem('pastSearch', JSON.stringify(searchedCities));
+        }
+    }
+    loadAutoComplete();
+}
 
 // getPlaceID is a function that locates the city selected by the user and returns the Google Place ID
 function getPlaceID (city, location) {
@@ -26,6 +67,7 @@ function getPlaceID (city, location) {
             response.json().then(function(data){
                 var placeID = data.candidates[0].place_id;
                 //send the fetched PlaceID to the Google Place Details
+                addCityToLocalStorage(city);
                 getPhotoReference(placeID, location);
             })
     })
@@ -183,10 +225,11 @@ function uvGet(lat, lon, location) {
 
 // Initialization function for the application
 function init() {
-weatherGet('Fredericton', 'north');
-getPlaceID('Fredericton', 'north');
-weatherGet('Melbourne', 'south');
-getPlaceID('Melbourne', 'south');
+    loadAutoComplete();
+    weatherGet('Fredericton', 'north');
+    getPlaceID('Fredericton', 'north');
+    weatherGet('Melbourne', 'south');
+    getPlaceID('Melbourne', 'south');
 }
 
 // Event listeners
