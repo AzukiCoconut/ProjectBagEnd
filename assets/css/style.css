@@ -18,6 +18,12 @@ img {
     justify-content: center !important;
 }
 
+/* styling for the autocomplete menu */
+ul.ui-autocomplete.ui-menu {
+    width: 200px;
+    background-color: white;
+}
+
 /* Styling for the weather cards */
 .card {
     border: 1px solid #1a1a1a;
