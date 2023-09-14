@@ -32,7 +32,7 @@ Weather Comparison is a web application that allows any user to find the current
 - Use client-side storage to store persistent data.
 - Be responsive.
 - Have a polished UI.
-- Have a clean repository that meets quality coding standards (file         structure, naming conventions, follows best practices for class/id-naming conventions, indentation, quality comments, etc.).
+- Have a clean repository that meets quality coding standards (file structure, naming conventions, follows best practices for class/id-naming conventions, indentation, quality comments, etc.).
 - Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application). 
 
 
@@ -75,8 +75,9 @@ The following animation demonstrates the application functionality:
 
 
 ## Technologies Used
-
+- JQuery
 - Tailwinds
+- Openweather API
 - Google API
 - Proxies
 
